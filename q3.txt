@@ -1,0 +1,42 @@
+1. https://www.2xl.kr/api/cardsms/group/category 의 데이터 중 group1 이 '술/음료' 인 값만 arr1 배열에 저장할것
+arr1 예) 
+[ { group1: '술/음료', group2: '물' },
+  { group1: '술/음료', group2: '탄산/쥬스' },
+  { group1: '술/음료', group2: '커피' },
+  { group1: '술/음료', group2: '맥주' },
+  { group1: '술/음료', group2: '소주/막걸리' },
+  { group1: '술/음료', group2: '양주' },
+  { group1: '술/음료', group2: '중국술' },
+  { group1: '술/음료', group2: '기타' } ]
+
+
+2. 1번에서 만들어진 arr1배열을 변수 arr2로 복제하고 arr2의 group2 값에 '주'가 있으면 삭제할것
+arr2 예)
+[ { group1: '술/음료', group2: '물' },
+  { group1: '술/음료', group2: '탄산/쥬스' },
+  { group1: '술/음료', group2: '커피' },
+  { group1: '술/음료', group2: '중국술' },
+  { group1: '술/음료', group2: '기타' } ]
+
+3. arr1 배열에서 map() 함수를 이용하여 group2 값만 있는 arr3배열을 만들것.
+arr3 예)
+[ '물', '탄산/쥬스', '커피', '맥주', '소주/막걸리', '양주', '중국술', '기타' ]
+
+4. 날짜 포맷팅, 계산등을 위한 라이브러리로 moment 가 있다. moment를 설치하고 q2.txt의 3번, 4번 기능을
+moment를 사용해서 출력해볼것
+
+
+
+**주의**
+1~3번에 해당하는 소스는 아래 소스를 바탕으로 '//여기에 로직을 추가할것' 주석 부분에만
+코딩해야함
+
+const axios = require('axios');
+
+axios.get('https://www.2xl.kr/api/cardsms/group/category').then(rep => {
+	//여기에 로직을 추가할것	
+
+	console.log(arr3);
+	console.log(arr2);
+	console.log(arr1);
+});
