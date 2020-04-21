@@ -5,16 +5,102 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<style>
+/* span {color:#00F} */
 
+.text {color:#00F}
+.border {border:1px solid red}
+
+
+div.top {
+	width : 300px;
+	border : 1px solid gray;
+	background-color: rgb(0, 100, 0, 0.3);
+}
 		</style>
 		<script>
+$(document).ready(function() {	//HTML문서가 준비되어있을때 발생하는 이벤트
+	// document.getElementById('text1')
+
+	// $('셀렉터');
+	console.log($('#text1').val());
+	$('#text1').val('ramen');	//id방식
+	$('#text1').on('keyup', function() {
+
+	});
+
+	$('[name="radio1"][value="YES"]').attr('checked', true);	//name방식
+	$('select').val('a2');	//tag방식
+
+	//class방식
+	setTimeout(function() {
+		$('span.border').removeClass('border');
+	}, 1000);
+
+
+
+});
+
+
+function click1() {
+	alert('클릭');
+}
+
+const obj = {
+	time : new Date().getTime(),
+	click : function() {
+		alert('click');
+	}
+}
 
 		</script>
 	</head>
 	<body>
+		<div class="top">
+			<input id="text1" name="name1" type="text" value="기본값"/>
+			<input type="password" value="abcd" onkeyup=""/>
+			<input type="checkbox" value="Y"/>
+			<input type="radio" name="radio1" value="YES"/>예<input type="radio" name="radio1" value="NO"/>아니오
+			<input type="button" value="버튼"/>
+			<button onclick="obj.click()">버튼</button>
+		</div>
+		<a href="http://www.naver.com" onclick="click1()">링크링크</a>
+		<select onchange="">
+			<option value="a1">열라면</option>
+			<option value="a2">짜파게티</option>
+			<option value="a3">떡볶이</option>
+		</select>
+		<textarea>
+			ㅁㄴ이ㅏ러미;아러;미ㅓㅇㄹ;ㅣ만어리;마ㅏㅣㄹㅇ밍럼로또
+		</textarea>
 
+		<table>
+			<tr>
+				<td><span style='color:red'>asdfasdf</span></td>
+				<td>111111111</td>
+			</tr>
+			<tr>
+				<td>0000</td>
+				<td>2222</td>
+			</tr>
+		</table>
+		<div>divdivdiv</div>
+		<span class="text">spanspanspan</span>
+		<span class="border">this is span</span>
+		<ul>
+			<li>아이유</li>
+			<li>반하나</li>
+			<li>이예준</li>
+		</ul>
+
+		<ol>
+			<li>아이유</li>
+			<li>반하나</li>
+			<li>이예준</li>
+		</ol>
 		<script>
-
+$('[type="button"]').on('click', function() {
+	console.log('11111111111111');
+});
 		</script>
 	</body>
 </html>
