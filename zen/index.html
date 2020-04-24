@@ -48,20 +48,30 @@ $(document).ready(function() {
 	$('#zen-summary').addClass('summary');
 
 	//id가 css-zen-garden 요소의 바로 하위에 있는 div 객체중 0번째 요소에 'page-wrapper' 값을 클래스에 추가
+	$("#css-zen-garden > div:eq(0)").addClass('page-wrapper');
 
 	//aside 태그의 클래스에 sidebar 추가
+	$('aside').addClass('sidebar');
 	
 	//클래스가 sidebar인 요소의 바로 하위에 있는 div객체에 'wrapper' 값을 클래스에 추가
+	$('.sidebar > div').addClass('wrapper');
 
 	//id가 zen-preamble 요소에 문자열 추가
+	preambles.forEach((p) => {
+		$('#zen-preamble').append(p);
+	});
 
 	//footer 태그 위치 옮기기
+	$('#zen-supporting').append($('footer'));
 
 	//id가 zen-explanation 인 요소의 하위에 h3 태그의 텍스트를 입력
+	$('#zen-explanation h3').text('So What is This About?');
 
 	//id가 zen-explanation 의 하위 p 태그중 처음에 있는 문자열에서 [[content]] 항목을 content 변수로 치환
+	$('#zen-explanation p:eq(0)').html($('#zen-explanation p:eq(0)').text().replace(/\[\[content\]\]/, content));
 
 	//모든 p 태그의 앞쪽에 ABC추가
+	$('p').prepend('ABC');
 });
 	</script>
 </head>
