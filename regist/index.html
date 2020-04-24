@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR"> 
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title></title>
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+
+	<!-- js -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/all.js"></script>
+
+</head>
+
+<body>
+	<div id="pop">
+		<div id="pop-inner" class="cent">
+			<p>오류 메시지</p>
+			<a href="#">확인</a>
+		</div>
+	</div>
+	<div id="wrap" class="">
+		<form action="#">
+			<p>
+				<label>계좌번호</label>
+				<input type="text" name="anumber" class="anumber">
+			</p>
+			<p>
+				<label>계좌 비밀번호</label>
+				<input type="password" name="apassword">
+			</p>
+			<p class="wrong-in">
+				<span>비밀번호가 일치하지 않습니다.</span>
+				<label>비밀번호 확인</label>
+				<input type="password" name="apasswordcon">
+				<span class="altext">&#42; 신규계좌에 사용할 숫자 4자리 비밀번호를 설정해 주시기 바랍니다.</span>
+			</p>
+			<hr>
+			<p class="wrong-id">
+				<span>이미 등록된 ID입니다.</span>
+				<label>대신증권 온라인 ID 입력</label>
+				<input type="text" name="aid" class="sinput">
+				<input type="submit" value="중복확인" class="button">
+			</p>
+			<p>
+				<label>대신증권 온라인 ID 비밀번호</label>
+				<input type="password" name="aidpassword">
+			</p>
+			<p class="wrong-in">
+				<span>비밀번호가 일치하지 않습니다.</span>
+				<label>비밀번호 확인</label>
+				<input type="password" name="aidpasswordcon">
+				<span class="altext pop">&#42; 영문, 숫자, 영문+숫자 조합 4~8자리<br>&#42; 연속문자, 연속숫자, 전화번호, 주민번호는 등록불가</span>
+			</p>
+		</form>
+	</div>
+	<footer>
+		<a href="#" class="wrong">다음</a>
+	</footer>
+</body>
+</html>
+

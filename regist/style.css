@@ -1,0 +1,278 @@
+
+/* Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	 -webkit-text-size-adjust:none;
+}
+body {
+	line-height: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+ol, ul, nav {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+}
+
+/* common 
+------------------------------------------------------------------------ */
+* { -webkit-text-size-adjust: none; }
+.smooth {
+	transition: all 250ms ease-in;
+	-webkit-transition: all 250ms ease-in;
+	-moz-transition: all 250ms ease-in;
+	-o-transition: all 250ms ease-in;
+}
+.smooth:hover {
+	transition: all 250ms ease-in;
+	-webkit-transition: all 250ms ease-in;
+	-moz-transition: all 250ms ease-in;
+	-o-transition: all 250ms ease-in;
+}
+.smooth-sl {
+	transition: all 120ms ease-in;
+	-webkit-transition: all 120ms ease-in;
+	-moz-transition: all 120ms ease-in;
+	-o-transition: all 120ms ease-in;
+}
+.smooth-sl:hover {
+	transition: all 120ms ease-in;
+	-webkit-transition: all 120ms ease-in;
+	-moz-transition: all 120ms ease-in;
+	-o-transition: all 120ms ease-in;
+}
+.ctw {
+	transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+}
+.cth {
+	transform: translate(0%, -50%);
+	-webkit-transform: translate(0%, -50%);
+	-moz-transform: translate(0%, -50%);
+	-o-transform: translate(0%, -50%);
+}
+.cent {
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+*:focus {
+	outline: none;
+}
+.btn-r {
+}
+/* layout
+------------------------------------------------------------------------ */
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	box-sizing: border-box;
+	overflow: auto;
+	font-size: 13px;
+	color: #999;
+	font-family:
+		'Spoqa Han Sans',
+		sans-serif;
+}
+#wrap {
+	padding: 0;
+	box-sizing: border-box;
+}
+#wrap form {
+	padding-bottom: 58px;
+}
+form hr {
+	height: 8px;
+	background-color: #f7f7f7;
+	margin: 16px 0;
+	width: 100%;
+	border: none;
+}
+form p {
+	width: 100%;
+	display: block;
+	padding: 10px 16px;
+	box-sizing: border-box;
+	font-size: 0;
+	letter-spacing: 0;
+	word-spacing: 0;
+}
+form p label {
+	width: 100%;
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+	display: inline-block;
+}
+form p input {
+	padding: 0 12px;
+	font-size: 14px;
+	width: 100%;
+	display: inline-block;
+	box-sizing: border-box;
+	height: 56px;
+	line-height: 56px;
+	border: none;
+	border-bottom: 1px solid #d8d8d8;
+	color: #333;
+	margin-bottom: 8px;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+form p input.button {
+	width: 100%;
+	height: 48px;
+	line-height: 48px;
+	background-color: #fff;
+	color: #00bbd8;
+	border-radius: 2px;
+	border: 1px solid #00bbd8;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+form p input.button:focus,
+form p input.button:active, 
+form p input.button:hover {
+	background-color: #f7f7f7;
+}
+input.anumber {
+	color: #c1c1c1;
+}
+input.anumber:focus {
+	color: #c1c1c1;
+}
+input:focus {
+	color: #333;
+}
+span.altext {
+	font-size: 13px !important;
+	color: #999 !important;
+	line-height: 1.4;
+	width: 100%;
+	display: block !important;
+	position: static !important;
+}
+footer a {
+	background-color: #00bbd8;
+	width: 100%;
+	position: fixed;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	padding: 21px 0;
+	line-height: 1;
+	bottom: 0;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+footer a:hover,
+footer a:focus,
+footer a:active {
+	background-color: #0a9db4;
+}
+p.act input {
+	border-color: #ff5a2b;
+	margin-top: 10px;
+}
+p.wrong-id,
+p.wrong-in {
+	position: relative;
+}
+p.wrong-id span,
+p.wrong-in span {
+	display: none;
+	font-size: 10px;
+	color: #ff5a2b;
+	position: absolute;
+	top: 74px;
+	left: 28px;
+}
+p.act span {
+	display: block;
+}
+#pop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 9;
+
+	display: none;
+}
+#pop-inner {
+	width: 90%;
+	padding: 0 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	background-color: #fff;
+	border-radius: 4px;
+}
+#pop-inner p {
+	padding: 40px 0;
+	line-height: 1.4;
+	font-size: 14px;
+	text-align: center;
+	color: #333;
+}
+#pop-inner a {
+	width: 100%;
+	border-top: 1px solid #d8d8d8;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	color: #00bbd8;
+	padding: 21px 0;
+	line-height: 1;
+}
