@@ -91,8 +91,10 @@ $(document).ready(function() {
     $('aside').find('div:first').addClass('wrapper');
     
 	/* <2> */
-	$("<span>ABC</span>").prependTo($('.summary').find("p"));
-	$("<span>ABC</span>").prependTo($('.preamble').find("p"));
+	$("<span>ABC</span>").prependTo($('p'));
+	// $("<span>ABC</span>").prependTo($('.summary').find("p"));
+    // $("<span>ABC</span>").prependTo($('.preamble').find("p"));
+    
 	// $("'ABC'").prependTo($(".summary").find("p"));	// 적용 안됨
 });
 	</script>
