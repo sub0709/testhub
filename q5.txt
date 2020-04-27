@@ -1,0 +1,27 @@
+classix 디렉토리 밑에 index.html과 index_org.html이 있음
+index_org.html은 원본이며 원본의 일부 내용을 수정하거나 삭제된 파일이 index.html임.
+index_org.html의 소스와 화면결과를 참고하여 부족한 화면을 완성하면 됨. 
+
+
+1. getMenuInfos(callback) 함수를 호출하면 메뉴정보를 받을수 있음. 
+해당 정보를 이용하여 화면 좌측에 있는 All Pages 기능을 완성할것
+
+2. getFeaturedList(callback) 함수를 호출하면 제품 리스트를 받을수 있음.
+해당 정보를 이용하여 FEATURED LISTINGS 화면을 완성할것. 
+주의 해야 할것은 1번과 동일한 유형의 코딩을 하면 되지만
+소스의 위치에 따라 결과가 적용 안될수 있음
+
+3. 2번이 완성되었으면 화면을 호출할때마다 제품 순서가 다르게 보이도록
+랜덤 로직을 추가할것. 
+
+4. 화면에 All Categories 와 All Location 두개의 셀렉트박스가 있다. 
+셀렉트박스에 현재 설정된 option값들은 무시하고 아래 규칙으로 다시 만들것
+  1) All Categories 항목에는 Korea, Japan, China 를 추가
+	2) All Categories 에서 Korea를 선택하면 All Locations 에는 Seoul, Busan이 보여야하고
+		Japan을 선택하면 Tokyo, Osaka
+		China를 선택하면 Beijing, Shanghai 가 보여야 함
+	3) 키워드를 입력하고 엔터키를 치거나 SEARCH 버튼을 클릭하면 
+		All Categories + All Locations + 키워드 값을 출력해야함.
+		만약 Korea, Busan 을 선택하고 Zombie 를 입력하고 엔터키를 쳤다면
+		"KoreaBusanZombie" 가 alert 또는 console.log 로 출력
+
