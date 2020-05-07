@@ -40,7 +40,6 @@
 		<script>
 
 
-
 		</script>
   </head>
 
@@ -139,11 +138,11 @@
 
                   </div>
                   <div class="col-md-3 col-sm-6 search-col">
-                    <input class="form-control keyword" name="keyword" value="" placeholder="Enter Keyword" type="text">
+                    <input value="corona" class="form-control keyword" name="keyword" value="" placeholder="Enter Keyword" type="text">
                     <i class="fa fa-search"></i>
                   </div>
                   <div class="col-md-3 col-sm-6 search-col">
-                    <button class="btn btn-common btn-search btn-block"><strong>Search</strong></button>
+                    <button id="btn1" class="btn btn-common btn-search btn-block"><strong>Search</strong></button>
                   </div>
                 </form>
               </div>
@@ -521,7 +520,29 @@
     <a href="#" class="back-to-top">
       <i class="fa fa-angle-up"></i>
     </a>
-			
+<script>
+const arr = [3, 10, -1, 20];
+Math.a
+getFeaturedList(function(ret) {
+	ret.forEach(item => {
+		$("#new-products").append(`
+		<div class="item">
+			<div class="product-item">
+				<div class="carousel-thumb">
+					<img src="${item.img}" alt=""> 
+					<div class="overlay">
+						<i class="fa fa-link"></i>
+					</div> 
+				</div>    
+				${item['item-name']}
+				<span class="price">$${item.price}</span>  
+			</div>
+		</div>
+	`);
+
+	})
+});
+</script>	
 
     <!-- Main JS  -->
     
@@ -536,7 +557,131 @@
     <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
     <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-select.min.js"></script>
+<script>
 
+getMenuInfos(function(ret) {
+	// console.log(ret, a, b, c);
+	// <ul class="nav navmenu-nav"> <!--- Menu -->
+	const $obj = $("div.navmenu ul.nav");
+	for(const item of ret) {
+		$obj.append(`
+			<li>
+				<a href="${item.href}">${item.menu}</a>
+			</li>
+		`);
+	}	
+});
+
+const infos = [
+	{"name":"Korea", area : ["Seoul", "Busan"]},
+  {"name":"Japan", area : ["Tokyo", "Osaka"]},
+	{"name":"China", area : ["Beijing", "Shanghai"]},
+];
+
+const tmp = $("select");
+console.log(tmp[1]);
+const $select1 = $(tmp[0]);
+const $select2 = $(tmp[1]);
+$select1.html("");
+infos.forEach(function(country) {
+	$select1.append(`
+	<option value="${country.name}">${country.name}</option>
+	`);
+});
+
+$select1.on("change", function(e) {
+	let obj = '';
+	infos.forEach(tmp => {
+		if(tmp.name == e.target.value) {
+			obj = tmp;
+		}
+	});
+
+
+	$select2.html("");
+	obj.area.forEach((local) => {
+		console.log(local);
+		$select2.append(`
+			<option value="${local}">${local}</option>
+		`);
+	});
+});
+
+$("#btn1").on("click", function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+	console.log($select1.val() + $select2.val() + $("input[name='keyword']").val());
+});
+
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+}
+
+let count = 0;
+function finish() {
+	console.log('done');
+	count++;
+	if(count == 2) {
+	}
+}
+
+setTimeout(function() {
+	console.log('1111');
+	finish();
+}, getRandomInt(0, 1000));
+
+setTimeout(function() {
+	console.log('2222');
+
+	setTimeout(function() {
+		console.log('333');
+		setTimeout(function() {
+			console.log('444');
+			finish();
+		}, getRandomInt(0, 1000));
+	}, getRandomInt(0, 1000));
+}, getRandomInt(0, 1000));
+
+function fn1() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			console.log('2222');
+			resolve();
+		}, getRandomInt(0, 1000));
+	});
+}
+
+function fn2() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			console.log('3333');
+			resolve();
+		}, getRandomInt(0, 1000));
+	});
+}
+function fn3() {
+	return new Promise(function(resolve, reject) {
+		setTimeout(function() {
+			console.log('4444');
+			resolve();
+		}, getRandomInt(0, 1000));
+	});
+}
+// const p1 = fn1();
+// const p2 = fn2();
+// Promise.all([p1, p2]).then(function() {
+// 	finish();
+// });
+
+(async function() {
+	await fn1();
+	await fn2();
+	await fn3();
+})();
+</script>
     
   </body>
 </html>
